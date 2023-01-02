@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="/post/0.html"/>
+      <url>/post/0.html</url>
+      
+        <content type="html"><![CDATA[<p>title: [LeetCode]最长公共前缀</p><p>date: 2023-01-02 </p><p>##描述</p><p>编写一个函数来查找字符串数组中的最长公共前缀。</p><p>如果不存在公共前缀，返回空字符串 <code>&quot;&quot;</code>。</p><p>##示例</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：strs = [<span class="string">&quot;flower&quot;</span>,<span class="string">&quot;flow&quot;</span>,<span class="string">&quot;flight&quot;</span>]</span><br><span class="line">输出：<span class="string">&quot;fl&quot;</span></span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：strs = [<span class="string">&quot;dog&quot;</span>,<span class="string">&quot;racecar&quot;</span>,<span class="string">&quot;car&quot;</span>]</span><br><span class="line">输出：<span class="string">&quot;&quot;</span></span><br><span class="line">解释：输入不存在公共前缀。</span><br></pre></td></tr></table></figure><p>##思路</p><p>标签：链表<br>当字符串数组长度为 0 时则公共前缀为空，直接返回；<br>令最长公共前缀 ans 的值为第一个字符串，进行初始化；<br>遍历后面的字符串，依次将其与 ans 进行比较，两两找出公共前缀，最终结果即为最长公共前缀；<br>如果查找过程中出现了 ans 为空的情况，则公共前缀不存在直接返回；<br>时间复杂度：O(s)O(s)，s 为所有字符串的长度之和。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><p>class Solution {<br>    public String longestCommonPrefix(String[] strs) {<br>        if(strs.length &#x3D;&#x3D; 0)<br>            return “”;<br>        String ans &#x3D; strs[0];<br>        for(int i &#x3D;1;i&lt;strs.length;i++) {<br>            int j&#x3D;0;<br>            for(;j&lt;ans.length() &amp;&amp; j &lt; strs[i].length();j++) {<br>                if(ans.charAt(j) !&#x3D; strs[i].charAt(j))<br>                    break;<br>            }<br>            ans &#x3D; ans.substring(0, j);<br>            if(ans.equals(“”))<br>                return ans;<br>        }<br>        return ans;<br>    }<br>}</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第一篇文章</title>
       <link href="/post/5c2fafc7.html"/>
       <url>/post/5c2fafc7.html</url>
