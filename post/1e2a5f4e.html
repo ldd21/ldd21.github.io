@@ -1,0 +1,410 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>蓝桥杯Java B组真题 | LcGo's Blog</title><meta name="author" content="LcGo"><meta name="copyright" content="LcGo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="2021年Java B组蓝桥杯真题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="蓝桥杯Java B组真题">
+<meta property="og:url" content="http://example.com/post/1e2a5f4e.html">
+<meta property="og:site_name" content="LcGo&#39;s Blog">
+<meta property="og:description" content="2021年Java B组蓝桥杯真题">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.imgdb.cn/item/63b3e32dbe43e0d30ede8f74.png">
+<meta property="article:published_time" content="2023-01-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-03T08:05:57.632Z">
+<meta property="article:author" content="LcGo">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="算法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/63b3e32dbe43e0d30ede8f74.png"><link rel="shortcut icon" href="https://pic.imgdb.cn/item/63b2d50c5d94efb26f526b90.jpg"><link rel="canonical" href="http://example.com/post/1e2a5f4e"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '蓝桥杯Java B组真题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-01-03 16:05:57'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.min.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/63b29c8b5d94efb26f0a42e2.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pic.imgdb.cn/item/63b3e32dbe43e0d30ede8f74.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LcGo's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">蓝桥杯Java B组真题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-01-02T16:00:00.000Z" title="发表于 2023-01-03 00:00:00">2023-01-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-01-03T08:05:57.632Z" title="更新于 2023-01-03 16:05:57">2023-01-03</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>题目来源于官方的真题，有时间再整理题解答案…</p>
+</blockquote>
+<h1 id="蓝桥杯Java-B组蓝桥杯真题"><a href="#蓝桥杯Java-B组蓝桥杯真题" class="headerlink" title="蓝桥杯Java B组蓝桥杯真题"></a>蓝桥杯Java B组蓝桥杯真题</h1><h2 id="试题-A-星期计算"><a href="#试题-A-星期计算" class="headerlink" title="试题 A: 星期计算"></a>试题 A: 星期计算</h2><h3 id="【问题描述】"><a href="#【问题描述】" class="headerlink" title="【问题描述】"></a>【问题描述】</h3><ul>
+<li>已知今天是星期六，请问 2022 天后是星期几？<br>注意用数字 1 到 7 表示星期一到星期日。</li>
+</ul>
+<h3 id="【答案提交】"><a href="#【答案提交】" class="headerlink" title="【答案提交】"></a>【答案提交】</h3><ul>
+<li>这是一道结果填空的题，你只需要算出结果后提交即可。本题的结果为一<br>个整数，在提交答案时只填写这个整数，填写多余的内容将无法得分。</li>
+</ul>
+<h2 id="试题-B-山"><a href="#试题-B-山" class="headerlink" title="试题 B: 山"></a>试题 B: 山</h2><h3 id="【问题描述】-1"><a href="#【问题描述】-1" class="headerlink" title="【问题描述】"></a>【问题描述】</h3><ul>
+<li>这天小明正在学数数。<br>他突然发现有些正整数的形状像一座“山”，比如 123565321、145541，它<br>们左右对称（回文）且数位上的数字先单调不减，后单调不增。<br>小明数了很久也没有数完，他想让你告诉他在区间 [2022, 2022222022] 中有<br>多少个数的形状像一座“山”。</li>
+</ul>
+<h3 id="【答案提交】-1"><a href="#【答案提交】-1" class="headerlink" title="【答案提交】"></a>【答案提交】</h3><ul>
+<li>这是一道结果填空的题，你只需要算出结果后提交即可。本题的结果为一<br>个整数，在提交答案时只填写这个整数，填写多余的内容将无法得分。</li>
+</ul>
+<h2 id="试题-C-字符统计"><a href="#试题-C-字符统计" class="headerlink" title="试题 C: 字符统计"></a>试题 C: 字符统计</h2><h3 id="【问题描述】-2"><a href="#【问题描述】-2" class="headerlink" title="【问题描述】"></a>【问题描述】</h3><ul>
+<li>给定一个只包含大写字母的字符串 S，请你输出其中出现次数最多的字母。<br>如果有多个字母均出现了最多次，按字母表顺序依次输出所有这些字母。</li>
+</ul>
+<h3 id="【输入格式】"><a href="#【输入格式】" class="headerlink" title="【输入格式】"></a>【输入格式】</h3><ul>
+<li>一个只包含大写字母的字符串 S .</li>
+</ul>
+<h3 id="【输出格式】"><a href="#【输出格式】" class="headerlink" title="【输出格式】"></a>【输出格式】</h3><ul>
+<li>若干个大写字母，代表答案。</li>
+</ul>
+<h3 id="【样例输入】"><a href="#【样例输入】" class="headerlink" title="【样例输入】"></a>【样例输入】</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BABBACAC</span><br></pre></td></tr></table></figure>
+<h3 id="【样例输出】"><a href="#【样例输出】" class="headerlink" title="【样例输出】"></a>【样例输出】</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AB</span><br></pre></td></tr></table></figure>
+<h3 id="【评测用例规模与约定】"><a href="#【评测用例规模与约定】" class="headerlink" title="【评测用例规模与约定】"></a>【评测用例规模与约定】</h3><ul>
+<li>对于 100% 的评测用例，1 ≤ |S | ≤ 106</li>
+</ul>
+<h2 id="试题-D-最少刷题数"><a href="#试题-D-最少刷题数" class="headerlink" title="试题 D: 最少刷题数"></a>试题 D: 最少刷题数</h2><h3 id="【问题描述】-3"><a href="#【问题描述】-3" class="headerlink" title="【问题描述】"></a>【问题描述】</h3><ul>
+<li>小蓝老师教的编程课有 N 名学生，编号依次是 1 . . . N。第 i 号学生这学期<br>刷题的数量是 Ai。<br>对于每一名学生，请你计算他至少还要再刷多少道题，才能使得全班刷题<br>比他多的学生数不超过刷题比他少的学生数。</li>
+</ul>
+<h3 id="【输入格式】-1"><a href="#【输入格式】-1" class="headerlink" title="【输入格式】"></a>【输入格式】</h3><ul>
+<li>第一行包含一个正整数 N。</li>
+<li>第二行包含 N 个整数：A1, A2, A3, . . . , AN.</li>
+</ul>
+<h3 id="【输出格式】-1"><a href="#【输出格式】-1" class="headerlink" title="【输出格式】"></a>【输出格式】</h3><ul>
+<li>输出 N 个整数，依次表示第 1 . . . N 号学生分别至少还要再刷多少道题。</li>
+</ul>
+<h3 id="【样例输入】-1"><a href="#【样例输入】-1" class="headerlink" title="【样例输入】"></a>【样例输入】</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> 5</span><br><span class="line">12 10 15 20 6</span><br></pre></td></tr></table></figure>
+<h3 id="【样例输出】-1"><a href="#【样例输出】-1" class="headerlink" title="【样例输出】"></a>【样例输出】</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 3 0 0 7</span><br></pre></td></tr></table></figure>
+<h3 id="【评测用例规模与约定】-1"><a href="#【评测用例规模与约定】-1" class="headerlink" title="【评测用例规模与约定】"></a>【评测用例规模与约定】</h3><ul>
+<li>对于 30% 的数据，1 ≤ N ≤ 1000, 0 ≤ Ai ≤ 1000.</li>
+<li>对于 100% 的数据，1 ≤ N ≤ 100000, 0 ≤ Ai ≤ 100000</li>
+</ul>
+<h2 id="试题-E-求阶乘"><a href="#试题-E-求阶乘" class="headerlink" title="试题 E: 求阶乘"></a>试题 E: 求阶乘</h2><h3 id="【问题描述】-4"><a href="#【问题描述】-4" class="headerlink" title="【问题描述】"></a>【问题描述】</h3><ul>
+<li>满足 N! 的末尾恰好有 K 个 0 的最小的 N 是多少?</li>
+<li>如果这样的 N 不存在输出 −1。</li>
+</ul>
+<h3 id="【输入格式】-2"><a href="#【输入格式】-2" class="headerlink" title="【输入格式】"></a>【输入格式】</h3><ul>
+<li>一个整数 K。</li>
+</ul>
+<h3 id="【输出格式】-2"><a href="#【输出格式】-2" class="headerlink" title="【输出格式】"></a>【输出格式】</h3><ul>
+<li>一个整数代表答案。</li>
+</ul>
+<h3 id="【样例输入】-2"><a href="#【样例输入】-2" class="headerlink" title="【样例输入】"></a>【样例输入】</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+<h3 id="【样例输出】-2"><a href="#【样例输出】-2" class="headerlink" title="【样例输出】"></a>【样例输出】</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
+<h3 id="【评测用例规模与约定】-2"><a href="#【评测用例规模与约定】-2" class="headerlink" title="【评测用例规模与约定】"></a>【评测用例规模与约定】</h3><ul>
+<li>对于 30% 的数据，1 ≤ K ≤ 106</li>
+<li>对于 100% 的数据，1 ≤ K ≤ 1018</li>
+</ul>
+<h2 id="试题-F-最大子矩阵"><a href="#试题-F-最大子矩阵" class="headerlink" title="试题 F: 最大子矩阵"></a>试题 F: 最大子矩阵</h2><h3 id="【问题描述】-5"><a href="#【问题描述】-5" class="headerlink" title="【问题描述】"></a>【问题描述】</h3><ul>
+<li>小明有一个大小为 N × M 的矩阵，可以理解为一个 N 行 M 列的二维数组。<br>我们定义一个矩阵 m 的稳定度 f(m) 为 f(m) &#x3D; max(m) − min(m)，其中 max(m)<br>表示矩阵 m 中的最大值，min(m) 表示矩阵 m 中的最小值。现在小明想要从这<br>个矩阵中找到一个稳定度不大于 limit 的子矩阵，同时他还希望这个子矩阵的面<br>积越大越好（面积可以理解为矩阵中元素个数）。<br>子矩阵定义如下：从原矩阵中选择一组连续的行和一组连续的列，这些行<br>列交点上的元素组成的矩阵即为一个子矩阵。</li>
+</ul>
+<h3 id="【输入格式】-3"><a href="#【输入格式】-3" class="headerlink" title="【输入格式】"></a>【输入格式】</h3><ul>
+<li>第一行输入两个整数 N，M，表示矩阵的大小。</li>
+<li>接下来 N 行，每行输入 M 个整数，表示这个矩阵。</li>
+<li>最后一行输入一个整数 limit，表示限制。</li>
+</ul>
+<h3 id="【输出格式】-3"><a href="#【输出格式】-3" class="headerlink" title="【输出格式】"></a>【输出格式】</h3><ul>
+<li>输出一个整数，分别表示小明选择的子矩阵的最大面积。</li>
+</ul>
+<h3 id="【样例输入】-3"><a href="#【样例输入】-3" class="headerlink" title="【样例输入】"></a>【样例输入】</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">3 4</span><br><span class="line">2 0 7 9</span><br><span class="line">0 6 9 7</span><br><span class="line">8 4 6 4</span><br><span class="line">8</span><br></pre></td></tr></table></figure>
+<h3 id="【样例输出】-3"><a href="#【样例输出】-3" class="headerlink" title="【样例输出】"></a>【样例输出】</h3><p>6</p>
+<h3 id="【样例说明】"><a href="#【样例说明】" class="headerlink" title="【样例说明】"></a>【样例说明】</h3><ul>
+<li>满足稳定度不大于 8 的且面积最大的子矩阵总共有三个，他们的面积都是<br>6（粗体表示子矩阵元素）：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">2 0 7 9</span><br><span class="line">0 6 9 7</span><br><span class="line">8 4 6 4</span><br><span class="line"></span><br><span class="line">2 0 7 9</span><br><span class="line">0 6 9 7</span><br><span class="line">8 4 6 4</span><br><span class="line"></span><br><span class="line">2 0 7 9</span><br><span class="line">0 6 9 7</span><br><span class="line">8 4 6 4</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="试题-G-数组切分"><a href="#试题-G-数组切分" class="headerlink" title="试题 G: 数组切分"></a>试题 G: 数组切分</h2><h3 id="【问题描述】-6"><a href="#【问题描述】-6" class="headerlink" title="【问题描述】"></a>【问题描述】</h3><ul>
+<li>已知一个长度为 N 的数组：A1, A2, A3, …AN 恰好是 1 ∼ N 的一个排列。现<br>在要求你将 A 数组切分成若干个 (最少一个，最多 N 个) 连续的子数组，并且<br>每个子数组中包含的整数恰好可以组成一段连续的自然数。</li>
+<li>例如对于 A &#x3D; {1, 3, 2, 4}, 一共有 5 种切分方法：</li>
+<li>{1}{3}{2}{4}：每个单独的数显然是 (长度为 1 的) 一段连续的自然数。</li>
+<li>{1}{3, 2}{4}：{3, 2} 包含 2 到 3，是 一段连续的自然数，另外 {1} 和 {4} 显然<br>也是。</li>
+<li>{1}{3, 2, 4}：{3, 2, 4} 包含 2 到 4，是 一段连续的自然数，另外 {1} 显然也是。</li>
+<li>{1, 3, 2}{4}：{1, 3, 2} 包含 1 到 3，是 一段连续的自然数，另外 {4} 显然也是。</li>
+<li>{1, 3, 2, 4}：只有一个子数组，包含 1 到 4，是 一段连续的自然数。</li>
+</ul>
+<h3 id="【输入格式】-4"><a href="#【输入格式】-4" class="headerlink" title="【输入格式】"></a>【输入格式】</h3><ul>
+<li>第一行包含一个整数 N。第二行包含 N 个整数，代表 A 数组。</li>
+</ul>
+<h3 id="【输出格式】-4"><a href="#【输出格式】-4" class="headerlink" title="【输出格式】"></a>【输出格式】</h3><p>输出一个整数表示答案。由于答案可能很大，所以输出其对 1000000007 取<br>模后的值</p>
+<h3 id="【样例输入】-4"><a href="#【样例输入】-4" class="headerlink" title="【样例输入】"></a>【样例输入】</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">1 3 2 4</span><br></pre></td></tr></table></figure>
+<h3 id="【样例输出】-4"><a href="#【样例输出】-4" class="headerlink" title="【样例输出】"></a>【样例输出】</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure>
+<h2 id="试题-H-回忆迷宫"><a href="#试题-H-回忆迷宫" class="headerlink" title="试题 H: 回忆迷宫"></a>试题 H: 回忆迷宫</h2><h3 id="【问题描述】-7"><a href="#【问题描述】-7" class="headerlink" title="【问题描述】"></a>【问题描述】</h3><ul>
+<li>爱丽丝刚从一处地下迷宫中探险归来，你能根据她对于自己行动路径的回<br>忆，帮她画出迷宫地图吗？<br>迷宫地图是基于二维网格的。爱丽丝会告诉你一系列她在迷宫中的移动步<br>骤，每个移动步骤可能是上下左右四个方向中的一种，表示爱丽丝往这个方向<br>走了一格。你需要根据这些移动步骤给出一个迷宫地图，并满足以下条件：</li>
+<li>1、爱丽丝能在迷宫内的某个空地开始，顺利的走完她回忆的所有移动步<br>骤。</li>
+<li>2、迷宫内不存在爱丽丝没有走过的空地。</li>
+<li>3、迷宫是封闭的，即可通过墙分隔迷宫内与迷宫外。任意方向的无穷远处<br>视为迷宫外，所有不与迷宫外联通的空地都视为是迷宫内。（迷宫地图为四联<br>通，即只有上下左右视为联通）</li>
+<li>4、在满足前面三点的前提下，迷宫的墙的数量要尽可能少。</li>
+</ul>
+<h3 id="【输入格式】-5"><a href="#【输入格式】-5" class="headerlink" title="【输入格式】"></a>【输入格式】</h3><ul>
+<li>第一行一个正整数 N，表示爱丽丝回忆的步骤数量。</li>
+<li>接下来一行 N 个英文字符，仅包含 UDLR 四种字符，分别表示上（Up）、</li>
+<li>下（Down）、左（Left）、右（Right）。</li>
+</ul>
+<h3 id="【输出格式】-5"><a href="#【输出格式】-5" class="headerlink" title="【输出格式】"></a>【输出格式】</h3><ul>
+<li>请通过字符画的形式输出迷宫地图。迷宫地图可能包含许多行，用字符 ‘*’<br>表示墙，用 ‘ ’（空格）表示非墙。<br>你的输出需要保证以下条件：</li>
+<li>1、至少有一行第一个字符为 ‘*’。</li>
+<li>2、第一行至少有一个字符为 ‘*’。</li>
+<li>3、每一行的最后一个字符为 ‘*’。</li>
+<li>4、最后一行至少有一个字符为 ‘*’。</li>
+</ul>
+<h3 id="【样例输入】-5"><a href="#【样例输入】-5" class="headerlink" title="【样例输入】"></a>【样例输入】</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">17</span><br><span class="line">UUUULLLLDDDDRRRRU</span><br></pre></td></tr></table></figure>
+<h3 id="【样例输出】-5"><a href="#【样例输出】-5" class="headerlink" title="【样例输出】"></a>【样例输出】</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*****</span><br><span class="line">* *</span><br><span class="line">* *** *</span><br><span class="line">* *** *</span><br><span class="line">* *** *</span><br><span class="line">* *</span><br><span class="line">*****</span><br></pre></td></tr></table></figure>
+<h3 id="【样例说明】-1"><a href="#【样例说明】-1" class="headerlink" title="【样例说明】"></a>【样例说明】</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">      爱丽丝可以把第六行第六个字符作为起点。</span><br><span class="line">外墙墙墙墙墙外</span><br><span class="line">墙内内内内内墙</span><br><span class="line">墙内墙墙墙内墙</span><br><span class="line">墙内墙墙墙内墙</span><br><span class="line">墙内墙墙墙内墙</span><br><span class="line">墙内内内内内墙</span><br><span class="line">外墙墙墙墙墙外</span><br></pre></td></tr></table></figure>
+<h2 id="试题-I-红绿灯"><a href="#试题-I-红绿灯" class="headerlink" title="试题 I: 红绿灯"></a>试题 I: 红绿灯</h2><h3 id="【问题描述】-8"><a href="#【问题描述】-8" class="headerlink" title="【问题描述】"></a>【问题描述】</h3><ul>
+<li>爱丽丝要开车去上班，上班的路上有许多红绿灯，这让爱丽丝很难过。为<br>了上班不迟到，她给自己的车安装了氮气喷射装置。现在她想知道自己上班最<br>短需要多少时间。</li>
+<li>爱丽丝的车最高速度是 1<br>V 米每秒，并且经过改装后，可以瞬间加速到小于<br>等于最高速的任意速度，也可以瞬间停止。</li>
+<li>爱丽丝家离公司有 N 米远，路上有 M 个红绿灯，第 i 个红绿灯位于离爱<br>丽丝家 Ai 米远的位置，绿灯持续 Bi 秒，红灯持续 Ci 秒。在初始时（爱丽丝开<br>始计时的瞬间），所有红绿灯都恰好从红灯变为绿灯。如果爱丽丝在绿灯变红的<br>瞬间到达红绿灯，她会停下车等红灯，因为她是遵纪守法的好市民。</li>
+<li>氮气喷射装置可以让爱丽丝的车瞬间加速到超光速（且不受相对论效应的<br>影响！），达到瞬移的效果，但是爱丽丝是遵纪守法的好市民，在每个红绿灯前<br>她都会停下氮气喷射，即使是绿灯，因为红绿灯处有斑马线，而使用氮气喷射<br>装置通过斑马线是违法的。此外，氮气喷射装置不能连续启动，需要一定时间<br>的冷却，表现为通过 K 个红绿灯后才能再次使用。（也就是说，如果 K &#x3D; 1，就<br>能一直使用啦！）初始时，氮气喷射装置处于可用状态。</li>
+</ul>
+<h3 id="【输入格式】-6"><a href="#【输入格式】-6" class="headerlink" title="【输入格式】"></a>【输入格式】</h3><ul>
+<li>第一行四个正整数 N、M、K、V，含义如题面所述。</li>
+<li>接下来 M 行，每行三个正整数 Ai、Bi、Ci，含义如题面所述。</li>
+</ul>
+<h3 id="【输出格式】-6"><a href="#【输出格式】-6" class="headerlink" title="【输出格式】"></a>【输出格式】</h3><ul>
+<li>输出一个正整数 T，表示爱丽丝到达公司最短需要多少秒。</li>
+</ul>
+<h3 id="【样例输入】-6"><a href="#【样例输入】-6" class="headerlink" title="【样例输入】"></a>【样例输入】</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">90 2 2 2</span><br><span class="line">30 20 20</span><br><span class="line">60 20 20</span><br></pre></td></tr></table></figure>
+<h3 id="【样例输出】-6"><a href="#【样例输出】-6" class="headerlink" title="【样例输出】"></a>【样例输出】</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">80</span><br></pre></td></tr></table></figure>
+<h3 id="【样例说明】-2"><a href="#【样例说明】-2" class="headerlink" title="【样例说明】"></a>【样例说明】</h3><ul>
+<li>爱丽丝在最开始直接使用氮气喷射装置瞬间到达第一个红绿灯，然后绿灯<br>通过，以最高速行进 60 秒后到达第二个红绿灯，此时绿灯刚好变红，于是她等<br>待 20 秒再次变为绿灯后通过该红绿灯，此时氮气喷射装置冷却完毕，爱丽丝再<br>次使用瞬间到达公司，总共用时 80 秒。</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">LcGo</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/post/1e2a5f4e.html">http://example.com/post/1e2a5f4e.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">LcGo's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/java/">java</a><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div><div class="post_share"><div class="social-share" data-image="https://pic.imgdb.cn/item/63b3e32dbe43e0d30ede8f74.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/post/5c2fafc7.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/63b29c8b5d94efb26f0a42f5.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">第一篇文章</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/post/6096f3d5.html" title="LeetCode热题"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/63b3e330be43e0d30ede9606.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-01-02</div><div class="title">LeetCode热题</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/63b29c8b5d94efb26f0a42e2.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LcGo</div><div class="author-info__description">LcGo's Blog</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ldd21"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ldd21" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1903927493&amp;site=qq&amp;menu=yes" target="_blank" title="QQ"><i class="fa-brands fa-qq"></i></a><a class="social-icon" href="https://y.music.163.com/m/user?id=405164013" target="_blank" title="网抑云"><i class="fa-solid fa-music"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%93%9D%E6%A1%A5%E6%9D%AFJava-B%E7%BB%84%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%9F%E9%A2%98"><span class="toc-text">蓝桥杯Java B组蓝桥杯真题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98-A-%E6%98%9F%E6%9C%9F%E8%AE%A1%E7%AE%97"><span class="toc-text">试题 A: 星期计算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0%E3%80%91"><span class="toc-text">【问题描述】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E7%AD%94%E6%A1%88%E6%8F%90%E4%BA%A4%E3%80%91"><span class="toc-text">【答案提交】</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98-B-%E5%B1%B1"><span class="toc-text">试题 B: 山</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0%E3%80%91-1"><span class="toc-text">【问题描述】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E7%AD%94%E6%A1%88%E6%8F%90%E4%BA%A4%E3%80%91-1"><span class="toc-text">【答案提交】</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98-C-%E5%AD%97%E7%AC%A6%E7%BB%9F%E8%AE%A1"><span class="toc-text">试题 C: 字符统计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0%E3%80%91-2"><span class="toc-text">【问题描述】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%E3%80%91"><span class="toc-text">【输入格式】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E3%80%91"><span class="toc-text">【输出格式】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5%E3%80%91"><span class="toc-text">【样例输入】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA%E3%80%91"><span class="toc-text">【样例输出】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%AF%84%E6%B5%8B%E7%94%A8%E4%BE%8B%E8%A7%84%E6%A8%A1%E4%B8%8E%E7%BA%A6%E5%AE%9A%E3%80%91"><span class="toc-text">【评测用例规模与约定】</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98-D-%E6%9C%80%E5%B0%91%E5%88%B7%E9%A2%98%E6%95%B0"><span class="toc-text">试题 D: 最少刷题数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0%E3%80%91-3"><span class="toc-text">【问题描述】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%E3%80%91-1"><span class="toc-text">【输入格式】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E3%80%91-1"><span class="toc-text">【输出格式】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5%E3%80%91-1"><span class="toc-text">【样例输入】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA%E3%80%91-1"><span class="toc-text">【样例输出】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%AF%84%E6%B5%8B%E7%94%A8%E4%BE%8B%E8%A7%84%E6%A8%A1%E4%B8%8E%E7%BA%A6%E5%AE%9A%E3%80%91-1"><span class="toc-text">【评测用例规模与约定】</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98-E-%E6%B1%82%E9%98%B6%E4%B9%98"><span class="toc-text">试题 E: 求阶乘</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0%E3%80%91-4"><span class="toc-text">【问题描述】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%E3%80%91-2"><span class="toc-text">【输入格式】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E3%80%91-2"><span class="toc-text">【输出格式】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5%E3%80%91-2"><span class="toc-text">【样例输入】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA%E3%80%91-2"><span class="toc-text">【样例输出】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%AF%84%E6%B5%8B%E7%94%A8%E4%BE%8B%E8%A7%84%E6%A8%A1%E4%B8%8E%E7%BA%A6%E5%AE%9A%E3%80%91-2"><span class="toc-text">【评测用例规模与约定】</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98-F-%E6%9C%80%E5%A4%A7%E5%AD%90%E7%9F%A9%E9%98%B5"><span class="toc-text">试题 F: 最大子矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0%E3%80%91-5"><span class="toc-text">【问题描述】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%E3%80%91-3"><span class="toc-text">【输入格式】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E3%80%91-3"><span class="toc-text">【输出格式】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5%E3%80%91-3"><span class="toc-text">【样例输入】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA%E3%80%91-3"><span class="toc-text">【样例输出】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%AF%B4%E6%98%8E%E3%80%91"><span class="toc-text">【样例说明】</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98-G-%E6%95%B0%E7%BB%84%E5%88%87%E5%88%86"><span class="toc-text">试题 G: 数组切分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0%E3%80%91-6"><span class="toc-text">【问题描述】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%E3%80%91-4"><span class="toc-text">【输入格式】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E3%80%91-4"><span class="toc-text">【输出格式】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5%E3%80%91-4"><span class="toc-text">【样例输入】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA%E3%80%91-4"><span class="toc-text">【样例输出】</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98-H-%E5%9B%9E%E5%BF%86%E8%BF%B7%E5%AE%AB"><span class="toc-text">试题 H: 回忆迷宫</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0%E3%80%91-7"><span class="toc-text">【问题描述】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%E3%80%91-5"><span class="toc-text">【输入格式】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E3%80%91-5"><span class="toc-text">【输出格式】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5%E3%80%91-5"><span class="toc-text">【样例输入】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA%E3%80%91-5"><span class="toc-text">【样例输出】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%AF%B4%E6%98%8E%E3%80%91-1"><span class="toc-text">【样例说明】</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98-I-%E7%BA%A2%E7%BB%BF%E7%81%AF"><span class="toc-text">试题 I: 红绿灯</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0%E3%80%91-8"><span class="toc-text">【问题描述】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F%E3%80%91-6"><span class="toc-text">【输入格式】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E3%80%91-6"><span class="toc-text">【输出格式】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%85%A5%E3%80%91-6"><span class="toc-text">【样例输入】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%BE%93%E5%87%BA%E3%80%91-6"><span class="toc-text">【样例输出】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%A0%B7%E4%BE%8B%E8%AF%B4%E6%98%8E%E3%80%91-2"><span class="toc-text">【样例说明】</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/1e2a5f4e.html" title="蓝桥杯Java B组真题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/63b3e32dbe43e0d30ede8f74.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="蓝桥杯Java B组真题"/></a><div class="content"><a class="title" href="/post/1e2a5f4e.html" title="蓝桥杯Java B组真题">蓝桥杯Java B组真题</a><time datetime="2023-01-02T16:00:00.000Z" title="发表于 2023-01-03 00:00:00">2023-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/5c2fafc7.html" title="第一篇文章"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/63b29c8b5d94efb26f0a42f5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第一篇文章"/></a><div class="content"><a class="title" href="/post/5c2fafc7.html" title="第一篇文章">第一篇文章</a><time datetime="2023-01-02T05:23:28.039Z" title="发表于 2023-01-02 13:23:28">2023-01-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/6096f3d5.html" title="LeetCode热题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic.imgdb.cn/item/63b3e330be43e0d30ede9606.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode热题"/></a><div class="content"><a class="title" href="/post/6096f3d5.html" title="LeetCode热题">LeetCode热题</a><time datetime="2023-01-01T16:00:00.000Z" title="发表于 2023-01-02 00:00:00">2023-01-02</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://pic.imgdb.cn/item/63b3e32dbe43e0d30ede8f74.png')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By LcGo</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="8012090031" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-lrcType="-1"> </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v6.2.0" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" data-title="主题版本Butterfly_v4.3.1" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" data-title="本站采用多线部署，主线路托管于Vercel" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></p>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><!-- hexo injector body_end end --></body></html>
